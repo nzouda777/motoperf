@@ -1,0 +1,23 @@
+{
+  "type": "slide_item",
+  "name": "slide item"
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "item_img",
+      "label": "add image"
+    },
+    {
+      "type": "text",
+      "id": "item_title",
+      "label": "add title",
+      "default": "Livraison rapide et offerte"
+    },
+    {
+      "type": "text",
+      "id": "item_desc",
+      "label": "add small description",
+      "default": "des $60 d'achats"
+    }
+  ]
+}

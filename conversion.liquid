@@ -1,0 +1,48 @@
+<p class="bs-delay">
+        <div class="bs-delay" id=" livraison-estimation">
+          Livraison estimée :
+          <span class="bs-colorize" id="livraison-dates">
+            {% assign jexpedition1 = section.settings['time-expedition'] | times: 86400 %}
+            {% assign jexpedition2 = section.settings['time-livraison'] | times: 86400 %}
+            {{ 'now' | date: '%s' | plus: jexpedition1 | date: '%d' }}
+            {{
+              'now'
+              | date: '%s'
+              | plus: jexpedition1
+              | date: '%B'
+              | replace: 'January', 'Janvier'
+              | replace: 'February', 'Fevrier'
+              | replace: 'March', 'Mars'
+              | replace: 'May', 'Mai'
+              | replace: 'April', 'Avril'
+              | replace: 'June', 'Juin'
+              | replace: 'July', 'Juillet'
+              | replace: 'August', 'Août'
+              | replace: 'October', 'Octobre'
+              | replace: 'November', 'Novembre'
+              | replace: 'September', 'Septembre'
+              | replace: 'December', 'Decembre'
+            }}
+            -
+            {{ 'now' | date: '%s' | plus: jexpedition2 | date: '%d' }}
+            {{
+              'now'
+              | date: '%s'
+              | plus: jexpedition2
+              | date: '%B'
+              | replace: 'January', 'Janvier'
+              | replace: 'February', 'Fevrier'
+              | replace: 'March', 'Mars'
+              | replace: 'May', 'Mai'
+              | replace: 'April', 'Avril'
+              | replace: 'June', 'Juin'
+              | replace: 'July', 'Juillet'
+              | replace: 'August', 'Août'
+              | replace: 'October', 'Octobre'
+              | replace: 'November', 'Novembre'
+              | replace: 'September', 'Septembre'
+              | replace: 'December', 'Decembre'
+            }}
+          </span>
+        </div>
+      </p>

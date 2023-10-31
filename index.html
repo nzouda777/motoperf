@@ -2,225 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <title>Popup Menu Example</title>
 </head>
 <body>
-    <section class="content-wrapper">
-        <h1 class="section_title">
-            Conversion éthanol par
-            <span class="colorize">Motoperf</span>
-        </h1>
-        <div class="content-wrapper_grid">
-            <div class="plaintext">
-                <h2 class="title-question">
-                    Qu'est-ce que la conversion <span class="colorize">ethanol</span>?
-                </h2>
-                <p class="description">
-                    La conversion au bio-éthanol est une démarche économique et écologique : ce carburant, qui se vend en moyenne 0,80 euros par litre grâce à sa moindre taxation, soit la moitié de celle du SP95-E10, présente plusieurs avantages pour séduire les automobilistes : économies et réduction des émissions de CO2.
-                </p>
-                <ul>
-                    <li>
-                        <span class="fa fa-check colorize"></span>
-                        Intervention rapide sans modifications mécaniques.
-                    </li>
-                    <li>
-                        <span class="fa fa-check colorize"></span>
-                        1000€ d'économies pour 13000 KM/an.
-                    </li>
-                    <li>
-                        <span class="fa fa-check colorize"></span>
-                        Aide au démarrage à froid et possibilité de rouler à l'essence ou à l'E85.
-                    </li>
-                    <li>
-                        <span class="fa fa-check colorize"></span>
-                        Capacité de restituer deux fois plus l’énergie qu’il n’en nécessite lors de sa production.
-                    </li>
-                </ul>
-                <a href="#" class="plus-info">Plus d'info</a>
-            </div>
-            <div class="img-side">
-                
-                <figure>
-                    <img src="https://motortech.fr/images/ecoplus.jpg" alt="">
-                </figure>
-            </div>
-        </div>
-    </section>
-    <section class="bio-counter" style="background-color: #efeff0!important;">
-       <div class="container">
-        <img src="https://motortech.fr/images/stats.webp" alt="">
-        <div class="review" >
-            <div class="review-grid">
-                <div class="review-grid_item">
-                    <div class="numeric-val">
-                        1000$
-                    </div>
-                    <div class="string-val">
-                        D'economies/an en moyenne
-                    </div>
-                </div>
-                <div class="review-grid_item">
-                    <div class="numeric-val">
-                        1000$
-                    </div>
-                    <div class="string-val">
-                        D'economies/an en moyenne
-                    </div>
-                </div>
-                <div class="review-grid_item">
-                    <div class="numeric-val">
-                        1000$
-                    </div>
-                    <div class="string-val">
-                        D'economies/an en moyenne
-                    </div>
-                </div>
-                <div class="review-grid_item">
-                    <div class="numeric-val">
-                        1000$
-                    </div>
-                    <div class="string-val">
-                        D'economies/an en moyenne
-                    </div>
-                </div>
-            </div>
-        </div>
+    <button id="openButton">Ouvrir le menu</button>
+    <div class="bs-overlay"></div>
+    <div id="sidebar" class="sidebar">
+        <button id="closeButton">Fermer</button>
+        <ul class="menu-list">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </div>
-    </section>
-    <section class="form-convert">
-        <h1 class="section-title">
-            Les formules de conversion proposees pas 
-            <span class="colorize">
-                Motortech
-            </span>
-        </h1>
-        <div class="form-grid">
-            <div class="form-grid_item">
-                <img src="https://motortech.fr/images/icones/e85.webp" alt="">
-                <div class="detail">
-                    <h3 class="detail-title">
-                        Formule ECO
-                    </h3>
-                    <p class="detail-desc">
-                        Roulez a l'E85, au sans-plomb ou bien les deux
-                    </p>
-                </div>
-            </div>
-            <div class="form-grid_item">
-                <img src="https://motortech.fr/images/icones/e85+.webp" alt="">
-                <div class="detail">
-                    <h3 class="detail-title">
-                        Formule ECO
-                    </h3>
-                    <p class="detail-desc">
-                        Roulez a l'E85, au sans-plomb ou bien les deux
-                    </p>
-                </div>
-            </div>
-            <div class="form-grid_item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255.99 256.01" data-inject-url="https://motortech.fr/assets/img/icons/solid/rocket.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-blue me-4"><path class="fill-primary" d="M250.75 0c-50-.89-107 25.22-143 65.75a135.36 135.36 0 00-92.77 39.5 5.32 5.32 0 003 9.07L59 120.23l-5 5.68a5.34 5.34 0 00.2 7.33l68.56 68.56a5.32 5.32 0 007.33.21l5.68-5.08 5.86 41.07a5.31 5.31 0 003.78 4.11 4.88 4.88 0 001.52.24 6.06 6.06 0 004.12-1.71 135 135 0 0039.16-92.42c40.57-36.14 66.89-93.12 65.74-143a5.33 5.33 0 00-5.2-5.2zM201.6 92.1a26.66 26.66 0 110-37.71 26.57 26.57 0 010 37.71z"></path><path class="fill-secondary" d="M29.05 180.31C17.63 191.72 2 243.3.22 249.14A5.36 5.36 0 005.33 256a5.41 5.41 0 001.53-.23c5.84-1.74 57.41-17.42 68.83-28.85a33 33 0 00-46.64-46.62z"></path></svg>
-                <div class="detail">
-                    <h3 class="detail-title">
-                        Formule ECO
-                    </h3>
-                    <p class="detail-desc">
-                        Roulez a l'E85, au sans-plomb ou bien les deux
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="form-convert_grid">
-            <div class="img-side">
-                <figure>
-                    <img src="https://motortech.fr/images/whatsise85.webp" alt="">
-                </figure>
-            </div>
-            <div class="plaintext">
-                <h2 class="title-question">
-                    Formule ECO
-                </h2>
-                <p class="description">
-                    La conversion au bio-éthanol est une démarche économique et écologique : ce carburant, qui se vend en moyenne 0,80 euros par litre grâce à sa moindre taxation, soit la moitié de celle du SP95-E10, présente plusieurs avantages pour séduire les automobilistes : économies et réduction des émissions de CO2.
-                </p>
-                <ul>
-                    <li>
-                        <span class="fa fa-check colorize"></span>
-                        Intervention rapide sans modifications mécaniques.
-                    </li>
-                    <li>
-                        <span class="fa fa-check colorize"></span>
-                        1000€ d'économies pour 13000 KM/an.
-                    </li>
-                    <li>
-                        <span class="fa fa-check colorize"></span>
-                        Aide au démarrage à froid et possibilité de rouler à l'essence ou à l'E85.
-                    </li>
-                </ul>
-                <a href="#" class="btn-large">
-                    Reprogrammation
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="content-wrapper">
-       
-        <div class="content-wrapper_grid">
-            <div class="img-side">
-                <figure>
-                    <img src="https://motortech.fr/images/ecoplus.jpg" alt="">
-                </figure>
-            </div>
-            <div class="plaintext with-number">
-                <h2 class="title-question">
-                    Qu'est-ce que la conversion <span class="colorize">ethanol</span>?
-                </h2>
-                <p class="description">
-                     du SP95-E10, présente plusieurs avantages pour séduire les automobilistes : économies et réduction des émissions de CO2.
-                </p>
-                <ul>
-                    <li>
-                        <div class="fa fa-1 colorize"></div>
-                        <div class="item">
-                            Intervention rapide sans modifications mécaniques.
-                            <p class="desc">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit veritatis consequuntur nostrum ex tenetur optio voluptatum dolorem, id aperiam porro expedita quae eligendi ipsa dolores accusantium modi? Esse, libero debitis?
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="fa fa-2 colorize"></div>
-                        <div class="item">
-                            1000€ d'économies pour 13000 KM/an.
-                            <p class="desc">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit veritatis consequuntur nostrum ex tenetur optio voluptatum dolorem, id aperiam porro expedita quae eligendi ipsa dolores accusantium modi? Esse, libero debitis?
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="fa fa-3 colorize"></div>
-                        <div class="item">
-                            Aide au démarrage à froid et possibilité de rouler à l'essence ou à l'E85.
-                            <p class="desc">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit veritatis consequuntur nostrum ex tenetur optio voluptatum dolorem, id aperiam porro expedita quae eligendi ipsa dolores accusantium modi? Esse, libero debitis?
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="fa fa-4 colorize"></div>
-                        <div class="item">
-                            Capacité de restituer deux fois plus l’énergie qu’il n’en nécessite lors de sa production.
-                            <p class="desc">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit veritatis consequuntur nostrum ex tenetur optio voluptatum dolorem, id aperiam porro expedita quae eligendi ipsa dolores accusantium modi? Esse, libero debitis?
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <script>
+       const openButton = document.getElementById("openButton");
+const closeButton = document.getElementById("closeButton");
+const sidebar = document.getElementById("sidebar");
+
+openButton.addEventListener("click", function() {
+    sidebar.style.left = "0";
+    document.querySelector(".bs-overlay").style.display = "block"
+    document.querySelector(".bs-overlay").style.background = "#000000a8"
+});
+
+closeButton.addEventListener("click", function() {
+    sidebar.style.left = "-250px";
+    document.querySelector(".bs-overlay").style.display = "none"
+});
+
+    </script>
 </body>
 </html>
